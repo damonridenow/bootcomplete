@@ -22,7 +22,7 @@ directive('bootcomplete', ["$compile", "$templateRequest", "$timeout", "$sce", f
         },
         template: "<div class='input-group input-group-{{btcSize}}'>\n" +
             "<input placeholder='{{btcPlaceholder}}' type='text' class='form-control' ng-model='bindModel' ng-blur='blur($event)' autocomplete=\"off\"/>\n" +
-            "<span class='input-group-addon'><i class='fa fa-refresh' ng-class=\"{'fa-spin': loading }\"></i></span>\n" +
+            "<span class='input-group-addon' ng-if=\"loading\"><i class='fa fa-refresh' ng-class=\"{'fa-spin': loading }\"></i></span>\n" +
             "</div>",
         link: function (scope, element, attrs, controller) {
 
